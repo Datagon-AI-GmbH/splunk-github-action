@@ -1,0 +1,14 @@
+name: Sync Check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+  statuses: write
+
+jobs:
+  check-sync:
+    uses: Datagon-AI-GmbH/org-workflows/.github/workflows/syncCheck.yml@main
